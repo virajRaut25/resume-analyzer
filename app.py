@@ -61,8 +61,9 @@ def convert_pdf_to_txt_pages(path):
 
 # web app
 def main():
-    st.title("Resume Screening App")
+    st.title("Resume Analyzer App")
     fig = plt.figure(figsize=(20,10))
+    sns.set(font_scale = 2)
     sns.countplot(x=df['Category'], hue=df['Category'], palette="husl")
     plt.xticks(rotation=90)
     st.pyplot(fig)
